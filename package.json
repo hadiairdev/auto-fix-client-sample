@@ -1,0 +1,10 @@
+{
+  "name": "auto-fix-sandbox",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A deliberately small app with a deliberately small bug, for exercising Airdev's auto-fix loop.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}
