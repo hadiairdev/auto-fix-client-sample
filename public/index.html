@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Northwind Supply Co.</title>
+
+    <!--
+      One <style> block, on purpose. Every visual change a ticket is likely to ask for -- a
+      typeface, a colour, a size, the button's shape -- is a single edit in here, so a request
+      like "make the heading serif" has one obvious place to land.
+    -->
+    <style>
+      :root {
+        --ink: #1d2733;
+        --muted: #5b6b7c;
+        --accent: #2f6df6;
+        --page: #ffffff;
+        --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        --font-heading: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font-family: var(--font-body);
+        line-height: 1.6;
+      }
+
+      main {
+        max-width: 42rem;
+        margin: 0 auto;
+        padding: 5rem 1.5rem;
+      }
+
+      h1 {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 0 0 0.75rem;
+      }
+
+      .tagline {
+        color: var(--muted);
+        font-size: 1.15rem;
+        margin: 0 0 2rem;
+      }
+
+      .cta {
+        display: inline-block;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        padding: 0.7rem 1.4rem;
+        border-radius: 6px;
+        font-weight: 600;
+      }
+
+      footer {
+        margin-top: 4rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Everything your workshop needs</h1>
+      <p class="tagline">
+        Tools, fixings and timber, delivered across the country in two working days.
+      </p>
+
+      <a class="cta" href="/catalogue">Browse the catalogue</a>
+
+      <footer>
+        <p>Northwind Supply Co. &middot; Est. 1974</p>
+      </footer>
+    </main>
+  </body>
+</html>
