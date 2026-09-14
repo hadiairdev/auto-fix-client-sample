@@ -1,0 +1,25 @@
+# An ordinary test workflow, of the kind a real client repository would already have.
+#
+# This is what makes the auto-fix demo honest. The portal opens a DRAFT pull request and a person
+# approves it in the maintenance queue -- and what they are approving is a PR with checks on it.
+# Without this, the PR would carry no signal at all and "Approve & merge" would be a leap of faith.
+#
+# Airdev's auto-fix loop does NOT install or need this. It is the client's own CI, triggered the way
+# any pull request triggers it.
+
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm test
